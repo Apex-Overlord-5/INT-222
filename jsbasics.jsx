@@ -1,4 +1,3 @@
-// Function to change the color based on the click type
 function changeColor(event) {
   if (event.detail === 1) {
       // Single click
