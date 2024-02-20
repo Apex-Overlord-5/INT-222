@@ -7,9 +7,6 @@ function changeColor(event) {
       document.body.style.backgroundColor = 'red';
   }
 }
-
-// Event listener for single click
 document.body.addEventListener('click', changeColor);
 
-// Event listener for double click
 document.body.addEventListener('dblclick', changeColor);
