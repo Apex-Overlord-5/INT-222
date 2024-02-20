@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.5s;
+        }
+
+        #clickMeButton {
+            padding: 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 20px;
+            font-family:cursive
+        }
+    </style>
+</head>
+<body>
+
+<button id="clickMeButton">Click Me</button>
+
+<script>
+    const colors = ['green', 'blue', 'pink', 'peach'];
+    let currentColorIndex = 0;
+
+    const button = document.getElementById('clickMeButton');
+
+    function changeColor(event) {
+        if (event.detail === 1) {
+            document.body.style.backgroundColor = colors[currentColorIndex];
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+        } else if (event.detail === 2) {
+            document.body.style.backgroundColor = 'red';
+        }
+        button.style.fontSize = parseInt(window.getComputedStyle(button).fontSize) + 2 + 'px';
+    }
+
+    button.addEventListener('click', changeColor);
+
+    button.addEventListener('dblclick', changeColor);
+
+   // const onmouseover
+</script>
+
+</body>
+</html>
