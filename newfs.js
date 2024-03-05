@@ -22,12 +22,14 @@
 //   });
 
 
-  const os = require('node:os');
-  console.log(os.arch());
+//   const os = require('node:os');
+//   console.log(os.arch());
 
-//   const mem = os.freemem();
-//   console.log(mem);
+// //   const mem = os.freemem();
+// //   console.log(mem);
 
-const mem = os.totalmem();
-console.log(mem);
+// const mem = os.totalmem();
+// console.log(mem);
   
+
+console.log(path.dirname('C\MERN RUBESH LPU WINTER PEP\Rubesh Blog New'));
