@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+  <style>
+    body {
+        background-color: #333;
+        color: #fff;
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 20px;
+        text-align: justify;
+    }
+
+    p {
+        color: #3498db;
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    a {
+        color: #ecf0f1;
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+    }
+
+    a:hover {
+        color: #2ecc71;
+    }
+
+    /* h1 {
+        color: #fff;
+        font-size: 36px;
+        text-align: center;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+        margin-bottom: 30px;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    p {
+        animation: fadeIn 1.5s ease-out;
+    } */
+</style>bbbb
+</head>
+<body>
+
+  <h2>Form Validation</h2>
+
+  <form id="myForm" onsubmit="return validateForm()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <span id="nameError" class="error"></span><br>
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email">
+    <span id="emailError" class="error"></span><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <span id="passwordError" class="error"></span><br>
+
+    <label for="Credit">Credit Card:</label>
+    <input type="credit" id="credit" name="credit">
+    <span id="creditError" class="error"></span><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    function validateForm() {}
+    
+      document.getElementById("nameError").innerHTML = "";
+      document.getElementById("emailError").innerHTML = "";
+      document.getElementById("passwordError").innerHTML = "";
+      document.getElementById("creditError").innerHTML = "";
+
+  
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+      var creditcard = document.getElementById("credit").value;
+
+      if (name === "") {
+        document.getElementById("nameError").innerHTML = "Name is required";
+        return false;
+      }
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (email === "") {
+        document.getElementById("emailError").innerHTML = "Email is required";
+        return false;
+      } else if (!emailRegex.test(email)) {
+        document.getElementById("emailError").innerHTML = "Invalid email format";
+        return false;
+      }
+       var creditcard = /^\[^\0-9]+\[^\0-9]+\[^\0-9]+\[^\0-9]$/;
+       if (credit === "") {
+        document.getElementById("creditError").innerHTML = "Credit Card is required";
+        return false;
+      } else if (!creditcard.length< 16) {
+        document.getElementById("creditError").innerHTML = "Invalid Credit Card format";
+        return false;
+
+
+
+      if (password === "") {
+        document.getElementById("passwordError").innerHTML = "Password is required";
+        return false;
+      } else if (password.length < 8) {
+        document.getElementById("passwordError").innerHTML = "Password must be at least 8 characters";
+        return false;
+      }
+
+
+      alert("Form submitted successfully!");
+      return true;
+    }
+  </script>
+
+</body>
+</html>
+    

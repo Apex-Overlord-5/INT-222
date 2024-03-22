@@ -32,4 +32,4 @@
 // console.log(mem);
   
 
-console.log(path.dirname('C\MERN RUBESH LPU WINTER PEP\Rubesh Blog New'));
+console.log(path.dirname('C\INT 222\package.js'));
